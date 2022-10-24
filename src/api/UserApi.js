@@ -1,4 +1,4 @@
-const base = 'http://54.179.82.237/BE-BenShop/api/v1/user'
+const base = 'http://18.143.74.96/api/v1/user'
 const UserApi = {
     createOrder: () => {
         return {
