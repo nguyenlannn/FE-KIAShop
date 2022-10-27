@@ -6,7 +6,7 @@ const AdminHeader = () => {
             <Link to="/">
                 <h2 className="align-middle text-center" style={{backgroundColor: "white"}}>
                     <em>
-                        <b className="text-warning"> Ben<span className="text-muted"> Shop</span></b>
+                        <b className="text-warning"> KIA<span className="text-muted"> Shop</span></b>
                     </em>
                 </h2>
             </Link>
