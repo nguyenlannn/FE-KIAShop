@@ -17,7 +17,7 @@ const Footer = () => {
                     </div>
                     <div className="col-md-3 col-12 my-sm-0 mt-5">
                         <ul className="list-unstyled">
-                            <li className="mt-md-3 mt-4" style={{fontWeight: 600}}>Về Ben Shop</li>
+                            <li className="mt-md-3 mt-4" style={{fontWeight: 600}}>Về KIA Shop</li>
                             <li><a href="/" className="link-to text-dark">Giới thiệu</a></li>
                             <li><a href="/" className="link-to text-dark">Liên hệ</a></li>
                             <li><a href="/" className="link-to text-dark">Hệ thống cửa hàng</a></li>
@@ -33,14 +33,14 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="col-md-3 col-12 font-italic align-items-center mt-md-3 mt-4">
-                        <h5><b className="text-warning"> Ben<span
+                        <h5><b className="text-warning"> KIA<span
                             className="text-muted"> Shop</span></b></h5>
                         <p className="social ">
                             <span><i className="fa fa-facebook " aria-hidden="true"/></span>
                             <span><i className="fa fa-linkedin" aria-hidden="true"/></span>
                             <span><i className="fa fa-twitter" aria-hidden="true"/></span>
                         </p>
-                        <small className="copy-rights cursor-pointer text-success">2022 Ben Shop</small><br/>
+                        <small className="copy-rights cursor-pointer text-success">2022 KIA Shop</small><br/>
                         <small>Copyright.All Rights Resered. </small><br/>
                         <small>
                             <Link to='/admin/category'>
