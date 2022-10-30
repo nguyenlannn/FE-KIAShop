@@ -8,7 +8,7 @@ const Slide = () => {
     const [product, setProduct] = useState({message: null, success: null, data: {content: []}})
 
     useEffect(() => {
-        fetch(BasicApi.searchProduct('sort=discount:desc&size=3').url)
+        fetch(BasicApi.searchProduct('isPin=1').url)
             .then((res) => res.json())
             .then((o) => setProduct(o));
     }, []);
@@ -25,14 +25,14 @@ const Slide = () => {
                     <div key={o.id} className="carousel-item active">
                         <Link to={`/product-detail?id=${o.id}`}>
                             <img style={{maxHeight: 500}}
-                                 src={o.productImages !== null && o.productImages.length !== 0 ? o.productImages[0].path : 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Yen_Bai_-_dogs_-_P1390010.JPG'}
+                                 src={o.productImages !== null && o.productImages.length !== 0 ? o.productImages[1].path : 'https://farm2.staticflickr.com/1886/42468204400_4b7da8936e_k.jpg'}
                                  className="d-block w-100 "
                                  alt={o.name}/>
-                            <div className="carousel-caption d-none d-md-block">
-                                <p style={{fontSize: "300%", fontWeight: "bold", color: "red"}}
-                                   className="text-left blink_me">Giảm {o.discount}%</p>
-                                <p style={{fontSize: "150%", fontWeight: "bold", color: "red"}}>{o.name}</p>
-                            </div>
+                            {/*<div className="carousel-caption d-none d-md-block">*/}
+                            {/*    <p style={{fontSize: "300%", fontWeight: "bold", color: "red"}}*/}
+                            {/*       className="text-left blink_me">Giảm {o.discount}%</p>*/}
+                            {/*    <p style={{fontSize: "150%", fontWeight: "bold", color: "red"}}>{o.name}</p>*/}
+                            {/*</div>*/}
                         </Link>
                     </div>
                 )}
@@ -40,14 +40,14 @@ const Slide = () => {
                     <div key={o.id} className="carousel-item">
                         <Link to={`/product-detail?id=${o.id}`}>
                             <img style={{maxHeight: 500}}
-                                 src={o.productImages !== null && o.productImages.length !== 0 ? o.productImages[0].path : 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Yen_Bai_-_dogs_-_P1390010.JPG'}
+                                 src={o.productImages !== null && o.productImages.length !== 0 ? o.productImages[1].path : 'https://farm2.staticflickr.com/1886/42468204400_4b7da8936e_k.jpg'}
                                  className="d-block w-100 "
                                  alt={o.name}/>
-                            <div className="carousel-caption d-none d-md-block">
-                                <p style={{fontSize: "300%", fontWeight: "bold", color: "red"}}
-                                   className="text-left blink_me">Giảm {o.discount}%</p>
-                                <p style={{fontSize: "150%", fontWeight: "bold", color: "red"}}>{o.name}</p>
-                            </div>
+                            {/*<div className="carousel-caption d-none d-md-block">*/}
+                            {/*    <p style={{fontSize: "300%", fontWeight: "bold", color: "red"}}*/}
+                            {/*       className="text-left blink_me">Giảm {o.discount}%</p>*/}
+                            {/*    <p style={{fontSize: "150%", fontWeight: "bold", color: "red"}}>{o.name}</p>*/}
+                            {/*</div>*/}
                         </Link>
                     </div>
                 )}

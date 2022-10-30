@@ -34,6 +34,7 @@ const AdminAddProduct = (props) => {
                     'Authorization': 'Bearer ' + localStorage.getItem('accessToken')
                 },
                 body: JSON.stringify({
+                   // isPin: isPin,
                     name: name,
                     price: price,
                     discount: discount,
