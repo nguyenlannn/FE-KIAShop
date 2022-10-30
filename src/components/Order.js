@@ -1,4 +1,4 @@
-import Domain from "../api/Domain";
+import Domain from "../base/Domain";
 import UserApi from "../api/UserApi";
 import {useNotification} from "react-hook-notification";
 import BasicApi from "../api/BasicApi";

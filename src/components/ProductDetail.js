@@ -1,10 +1,11 @@
 import {Link, useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
-import Domain from "../api/Domain";
+import Domain from "../base/Domain";
 import BasicApi from "../api/BasicApi";
 import AddToCart from "./AddToCart";
 import Comment from "./Comment";
 import ProductPropose from "./ProductPropose";
+import baseImage from "../base/BaseImage";
 
 const ProductDetail = () => {
     const [product, setProduct] = useState({message: null, success: null, data: {productImages: [{path: null}]}})
@@ -45,8 +46,10 @@ const ProductDetail = () => {
                     </div>
                     <div className="col-sm-10">
                         <img style={{maxHeight: 500}} className="img-fluid"
-                             src={path || product.data.productImages[0].path}
-                             alt={product.data.productImages[0].name}/>
+                             src={path || (product.data.productImages.length !==0 ?
+                                 product.data.productImages[0].path:baseImage[1])}
+                             alt={product.data.productImages.length !==0 ?
+                                 product.data.productImages[0].path:baseImage[1].name}/>
                     </div>
                 </div>
             </div>

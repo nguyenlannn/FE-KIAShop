@@ -1,5 +1,5 @@
 import AdminHeader from "../../components/admin/AdminHeader";
-import Domain from "../../api/Domain";
+import Domain from "../../base/Domain";
 import jwt_decode from "jwt-decode";
 import {useEffect, useState} from "react";
 import AdminApi from "../../api/AdminApi";

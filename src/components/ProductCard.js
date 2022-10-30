@@ -1,10 +1,10 @@
 import {Link} from "react-router-dom";
-import moment from "moment";
+import baseImage from "../base/BaseImage";
 
 const ProductCard = (props) => {
     return <Link to={`/product-detail?id=${props.product.id}`}>
         <img
-            src={props.product.productImages !== null && props.product.productImages.length !== 0 ? props.product.productImages[0].path : 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Yen_Bai_-_dogs_-_P1390010.JPG'}
+            src={props.product.productImages !== null && props.product.productImages.length !== 0 ? props.product.productImages[0].path :baseImage[1]}
             className="card-img-top" alt={props.product.name}/>
         <div className="card-body card">
             <h5 className="card-title text-truncate">{props.product.name}</h5>

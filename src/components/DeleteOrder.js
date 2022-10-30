@@ -1,5 +1,5 @@
 import UserApi from "../api/UserApi";
-import Domain from "../api/Domain";
+import Domain from "../base/Domain";
 import BasicApi from "../api/BasicApi";
 import {useNotification} from "react-hook-notification";
 

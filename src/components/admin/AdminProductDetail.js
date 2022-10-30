@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import BasicApi from "../../api/BasicApi";
 import AdminApi from "../../api/AdminApi";
-import Domain from "../../api/Domain";
+import Domain from "../../base/Domain";
 import AdminAddProductImage from "./AdminAddProductImage";
 import AdminDeleteProductImage from "./AdminDeleteProductImage";
 import AdminEditProductImage from "./AdminEditProductImage";

@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {useNotification} from "react-hook-notification";
 import AdminApi from "../../api/AdminApi";
-import Domain from "../../api/Domain";
+import Domain from "../../base/Domain";
 import BasicApi from "../../api/BasicApi";
 
 const AdminAddProductImage = (props) => {

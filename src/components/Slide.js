@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import BasicApi from "../api/BasicApi";
 import {Link} from "react-router-dom";
 import '../assets/css/Slide.css'
+import baseImage from "../base/BaseImage";
 
 const Slide = () => {
 
@@ -25,7 +26,7 @@ const Slide = () => {
                     <div key={o.id} className="carousel-item active">
                         <Link to={`/product-detail?id=${o.id}`}>
                             <img style={{maxHeight: 500}}
-                                 src={o.productImages !== null && o.productImages.length !== 0 ? o.productImages[1].path : 'https://farm2.staticflickr.com/1886/42468204400_4b7da8936e_k.jpg'}
+                                 src={o.productImages !== null && o.productImages.length >=2 ? o.productImages[1].path : baseImage[0]}
                                  className="d-block w-100 "
                                  alt={o.name}/>
                             {/*<div className="carousel-caption d-none d-md-block">*/}
@@ -40,7 +41,7 @@ const Slide = () => {
                     <div key={o.id} className="carousel-item">
                         <Link to={`/product-detail?id=${o.id}`}>
                             <img style={{maxHeight: 500}}
-                                 src={o.productImages !== null && o.productImages.length !== 0 ? o.productImages[1].path : 'https://farm2.staticflickr.com/1886/42468204400_4b7da8936e_k.jpg'}
+                                 src={o.productImages !== null && o.productImages.length >=2 ? o.productImages[1].path : baseImage[0]}
                                  className="d-block w-100 "
                                  alt={o.name}/>
                             {/*<div className="carousel-caption d-none d-md-block">*/}

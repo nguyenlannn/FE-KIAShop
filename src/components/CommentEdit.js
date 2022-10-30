@@ -1,7 +1,7 @@
 import jwt_decode from "jwt-decode";
 import {useState} from "react";
 import {useNotification} from "react-hook-notification";
-import Domain from "../api/Domain";
+import Domain from "../base/Domain";
 import UserApi from "../api/UserApi";
 import BasicApi from "../api/BasicApi";
 

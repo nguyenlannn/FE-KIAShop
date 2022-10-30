@@ -1,6 +1,6 @@
 import {useState} from "react";
 import AdminApi from "../../api/AdminApi";
-import Domain from "../../api/Domain";
+import Domain from "../../base/Domain";
 import BasicApi from "../../api/BasicApi";
 import {useNotification} from "react-hook-notification";
 
@@ -34,7 +34,7 @@ const AdminAddProduct = (props) => {
                     'Authorization': 'Bearer ' + localStorage.getItem('accessToken')
                 },
                 body: JSON.stringify({
-                   // isPin: isPin,
+                   isPin: checked.toString(),
                     name: name,
                     price: price,
                     discount: discount,
@@ -116,6 +116,12 @@ const AdminAddProduct = (props) => {
                                                   onChange={e => setDescription(e.target.value)}>{description}</textarea>
                                     </li>
                                 </ul>
+                            </div>
+                            <div className="col-md-3">
+
+                                <input type="radio" value="yes" name="gender" /> pin <br/>
+                                <input type="radio" value="no" name="gender" /> no pin <br/>
+
                             </div>
                             <div className="col-md-3">
                                 {props.category.data.map(oo =>
