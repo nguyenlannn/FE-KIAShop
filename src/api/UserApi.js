@@ -1,4 +1,4 @@
-import baseApi from "./BaseApi";
+import baseApi from "../base/BaseApi";
 
 const base = `${baseApi}/api/v1/user`
 const UserApi = {

@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import UserApi from "../api/UserApi";
-import Domain from "../api/Domain";
+import Domain from "../base/Domain";
 import BasicApi from "../api/BasicApi";
 import jwt_decode from "jwt-decode";
 

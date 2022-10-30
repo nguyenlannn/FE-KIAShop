@@ -2,7 +2,7 @@ import AdminHeader from "../../components/admin/AdminHeader";
 import {useEffect, useState} from "react";
 import BasicApi from "../../api/BasicApi";
 import jwt_decode from "jwt-decode";
-import Domain from "../../api/Domain";
+import Domain from "../../base/Domain";
 import AdminEditCategory from "../../components/admin/AdminEditCategory";
 import AdminAddCategory from "../../components/admin/AdminAddCategory";
 import AdminDeleteCategory from "../../components/admin/AdminDeleteCategory";

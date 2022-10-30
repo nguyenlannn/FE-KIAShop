@@ -2,7 +2,7 @@ import AdminHeader from "../../components/admin/AdminHeader";
 import {useEffect, useState} from "react";
 import BasicApi from "../../api/BasicApi";
 import AdminProductDetail from "../../components/admin/AdminProductDetail";
-import Domain from "../../api/Domain";
+import Domain from "../../base/Domain";
 import jwt_decode from "jwt-decode";
 import AdminAddProduct from "../../components/admin/AdminAddProduct";
 import AdminDeleteProduct from "../../components/admin/AdminDeleteProduct";
@@ -32,6 +32,7 @@ const AdminProduct = () => {
     const [page, setPage] = useState(0)
     const [search, setSearch] = useState('')
     const [productId, setProductId] = useState('')
+    const [pin, setpin]= useState()
     let pages = []
 
     useEffect(() => {
@@ -74,6 +75,12 @@ const AdminProduct = () => {
                     </select>
                     <input className="form-control" style={{marginTop: 30}} placeholder="Mã sản phẩm"
                            onChange={e => setProductId(e.target.value)}/>
+
+                    <p style={{marginTop: 30}}>Ghim</p>
+                    <input type="radio" value="yes" name="pin" /> ghim <br/>
+                    <input type="radio" value="no" name="pin" /> không ghim <br/>
+                    <input type="radio" value="all" name="pin" /> tất cả <br/>
+
                 </div>
                 <div className="col-sm-9">
                     <ul>

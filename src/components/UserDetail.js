@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Domain from "../api/Domain";
+import Domain from "../base/Domain";
 import UserApi from "../api/UserApi";
 import BasicApi from "../api/BasicApi";
 import Header from "./Header";

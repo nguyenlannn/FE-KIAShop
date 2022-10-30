@@ -2,7 +2,7 @@ import {useNotification} from "react-hook-notification";
 import jwt_decode from "jwt-decode";
 import UserApi from "../api/UserApi";
 import BasicApi from "../api/BasicApi";
-import Domain from "../api/Domain";
+import Domain from "../base/Domain";
 
 const CommentDelete = (props) => {
     const notification = useNotification()

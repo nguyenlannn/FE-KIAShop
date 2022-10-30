@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import AdminApi from "../../api/AdminApi";
-import Domain from "../../api/Domain";
+import Domain from "../../base/Domain";
 import BasicApi from "../../api/BasicApi";
 import EditOrderDetailNote from "../EditOrderDetailNote";
 import {useNotification} from "react-hook-notification";
