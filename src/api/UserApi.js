@@ -1,4 +1,6 @@
-const base = 'http://18.143.74.96/api/v1/user'
+import baseApi from "./BaseApi";
+
+const base = `${baseApi}/api/v1/user`
 const UserApi = {
     createOrder: () => {
         return {
@@ -30,16 +32,16 @@ const UserApi = {
             method: 'POST'
         }
     },
-    editProductComment: (id)=>{
-        return{
-            url:`${base}/product/comment/${id}`,
-            method:'PATCH'
+    editProductComment: (id) => {
+        return {
+            url: `${base}/product/comment/${id}`,
+            method: 'PATCH'
         }
     },
-    deleteProductComment:(id)=>{
-        return{
-            url:`${base}/product/comment/${id}`,
-            method:'DELETE'
+    deleteProductComment: (id) => {
+        return {
+            url: `${base}/product/comment/${id}`,
+            method: 'DELETE'
         }
     },
 

@@ -1,4 +1,6 @@
-const base = 'http://18.143.74.96/api/v1/admin'
+import baseApi from "./BaseApi";
+
+const base = `${baseApi}/api/v1/admin`
 const AdminApi = {
     editCategory: (id) => {
         return {
