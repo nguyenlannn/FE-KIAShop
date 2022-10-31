@@ -118,12 +118,6 @@ const AdminAddProduct = (props) => {
                                 </ul>
                             </div>
                             <div className="col-md-3">
-
-                                <input type="radio" value="yes" name="gender" /> pin <br/>
-                                <input type="radio" value="no" name="gender" /> no pin <br/>
-
-                            </div>
-                            <div className="col-md-3">
                                 {props.category.data.map(oo =>
                                     <div key={oo.id}>
                                         <input type="checkbox" checked={checked.includes(oo.id)}

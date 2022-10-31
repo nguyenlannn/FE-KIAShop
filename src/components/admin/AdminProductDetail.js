@@ -16,7 +16,8 @@ const AdminProductDetail = (props) => {
             discount: props.product.discount,
             description: props.product.description,
             productImages: props.product.productImages,
-            categories: props.product.categories
+            categories: props.product.categories,
+            isPin: props.product.isPin
         }
     })
 
@@ -30,6 +31,7 @@ const AdminProductDetail = (props) => {
     const [price, setPrice] = useState(props.product.price)
     const [discount, setDiscount] = useState(props.product.discount)
     const [description, setDescription] = useState(props.product.description)
+    const [isPin, setIsPin] = useState(props.product.description)
 
 
     const [checked, setChecked] = useState([...props.product.categories.map(ca => ca.id)])
@@ -54,7 +56,8 @@ const AdminProductDetail = (props) => {
                 price: price,
                 discount: discount,
                 description: description,
-                categories: checked.toString()
+                categories: checked.toString(),
+                isPin: isPin
             })
         })
             .then(resp => resp.json())
@@ -86,7 +89,7 @@ const AdminProductDetail = (props) => {
                     }
                 }
             )
-    }, [name, price, discount, description, checked, props.product.id]);
+    }, [name, price, discount, description, checked, props.product.id, isPin]);
 
     const handleAdd = () => {
         fetch(BasicApi.getProductById(props.product.id).url)
@@ -154,6 +157,17 @@ const AdminProductDetail = (props) => {
                                 </div>
                             </div>
                             <div className="col-md-3">
+                                <div style={{marginTop: 30}}>
+                                    <label>
+                                        <input type="radio" name="lan" onChange={e => setIsPin(true)}
+                                               checked={isPin === true}/> Ghim
+                                    </label><br/>
+                                    <label>
+                                        <input type="radio" name="lan" onChange={e => setIsPin(false)}
+                                               checked={isPin === false}/> Không ghim
+                                    </label>
+                                    <hr/>
+                                </div>
                                 {props.category.data.map(oo =>
                                     <div key={oo.id}>
                                         <input type="checkbox" checked={checked.includes(oo.id)}
