@@ -32,7 +32,7 @@ const AdminProduct = () => {
     const [page, setPage] = useState(0)
     const [search, setSearch] = useState('')
     const [productId, setProductId] = useState('')
-    const [pin, setpin]= useState()
+    const [isPin, setIsPin] = useState(-1)
     let pages = []
 
     useEffect(() => {
@@ -43,10 +43,10 @@ const AdminProduct = () => {
 
     useEffect(() => {
         fetch(BasicApi.searchProduct(
-            `size=5&categoryId=${categoryId}&page=${page}&search=${search}&productId=${productId}`).url)
+            `size=5&categoryId=${categoryId}&page=${page}&search=${search}&productId=${productId}&isPin=${isPin}`).url)
             .then((res) => res.json())
             .then((o) => setProduct(o));
-    }, [categoryId, page, search, productId]);
+    }, [categoryId, page, search, productId, isPin]);
 
     const handleReload = () => {
         fetch(BasicApi.searchProduct(
@@ -76,11 +76,20 @@ const AdminProduct = () => {
                     <input className="form-control" style={{marginTop: 30}} placeholder="Mã sản phẩm"
                            onChange={e => setProductId(e.target.value)}/>
 
-                    <p style={{marginTop: 30}}>Ghim</p>
-                    <input type="radio" value="yes" name="pin" /> ghim <br/>
-                    <input type="radio" value="no" name="pin" /> không ghim <br/>
-                    <input type="radio" value="all" name="pin" /> tất cả <br/>
-
+                    <div style={{marginTop: 30}}>
+                        <label>
+                            <input type="radio" name="isPin" onChange={e => setIsPin(-1)}
+                                   checked={isPin === -1}/>Tất cả
+                        </label><br/>
+                        <label>
+                            <input type="radio" name="isPin" onChange={e => setIsPin(1)}
+                                   checked={isPin === 1}/> Ghim
+                        </label><br/>
+                        <label>
+                            <input type="radio" name="isPin" onChange={e => setIsPin(0)}
+                                   checked={isPin === 0}/> Không ghim
+                        </label><br/>
+                    </div>
                 </div>
                 <div className="col-sm-9">
                     <ul>
